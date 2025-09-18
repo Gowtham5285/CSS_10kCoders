@@ -1,0 +1,63 @@
+/*
+is it possible to change the order of priority in css?
+Yes 
+Box model:-
+------------
+Content- width & Height
+padding- around the content the padding will apply
+         the padding will apply the background color
+         it doesn't work on negative values
+border- around the padding the border will apply
+margin- around the border & the element out side the margin will apply
+        the margin will take the negative values
+        the margin doesn't apply the background color
+ */
+/* h1{
+    color: aqua !important;
+}
+h2{
+    color: blue;
+    background-color: cornsilk;
+} */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.Container{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    /* padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px; */
+    /* padding: 10px 20px 30px 40px; */
+
+    /* border-top-width: 10px;
+    border-top-color: red;
+    border-top-style: solid;
+
+    border-right-width: 10px;
+    border-right-color: darkblue;
+    border-right-style: dotted;
+
+    border-bottom-color: black;
+    border-bottom-width: 10px;
+    border-bottom-style: dashed;
+
+    border-left-width: 10px;
+    border-left-color: darkmagenta;
+    border-left-style: groove; */
+
+    /* border-width: 10px;
+    border-color: chocolate;
+    border-style: groove; */
+
+    /* border: 5px solid purple;
+    border: 5px solid; */
+    /* default the color is black*/
+    padding: 10px 20px 30px 40px;
+    border: 5px solid;
+    /* margin: 10px 20px 30px 40px; */
+    /* default margin for body is 8px*/
+}
