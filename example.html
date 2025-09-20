@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Transitions Demo</title>
+  <style>
+    :root{
+      --bg:#f3f6fb;
+      --card:#ffffff;
+      --accent:#4f46e5;
+      --muted:#6b7280;
+    }
+
+    /* Reset-ish */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg), #e9eef8 60%);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      color:#111827;
+    }
+
+    .container{
+      width:100%;
+      max-width:1000px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+      align-items:start;
+    }
+
+    /* CARD with lift on hover */
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:24px;
+      box-shadow: 0 6px 18px rgba(20,30,60,0.08);
+      transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms ease, border-color 300ms;
+      border:1px solid rgba(16,24,40,0.04);
+    }
+    .card:hover{
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(16,24,40,0.12);
+      border-color: rgba(79,70,229,0.12);
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    }
+
+    h1{font-size:20px;margin-bottom:6px}
+    p.lead{color:var(--muted);margin-bottom:12px;font-size:14px}
+
+    /* Image with smooth zoom on hover */
+    .img-wrap{
+      border-radius:10px;
+      overflow:hidden;
+      height:160px;
+      position:relative;
+    }
+    .img-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition: transform 450ms cubic-bezier(.2,.9,.2,1);
+      transform-origin: center;
+      display:block;
+    }
+    .img-wrap:hover img{ transform: scale(1.12); }
+
+    /* Button with color + shadow transition */
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow: 0 8px 20px rgba(79,70,229,0.18);
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease, background 180ms ease;
+      cursor:pointer;
+    }
+    .btn:active{ transform: translateY(1px) scale(.995); }
+    .btn:hover{ box-shadow: 0 14px 34px rgba(79,70,229,0.22); opacity:0.98; }
+
+    /* small subtle icon rotation on hover */
+    .btn .arrow{
+      display:inline-block;
+      margin-left:8px;
+      transition: transform 220ms ease;
+    }
+    .btn:hover .arrow{ transform: translateX(4px) rotate(10deg); }
+
+    /* text link underlines with width transition */
+    .link{
+      display:inline-block;
+      color:var(--accent);
+      text-decoration:none;
+      position:relative;
+      padding-bottom:2px;
+    }
+    .link::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      height:2px;
+      width:0%;
+      background:linear-gradient(90deg,var(--accent),#7c3aed);
+      transition: width 260ms ease;
+      border-radius:2px;
+    }
+    .link:hover::after{ width:100%; }
+
+    /* Modal (fade + scale) */
+    .modal-backdrop{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(2,6,23,0.45);
+      opacity:0;
+      pointer-events:none;
+      transition: opacity 240ms ease;
+    }
+    .modal-backdrop.open{
+      opacity:1;
+      pointer-events:auto;
+    }
+    .modal{
+      background:var(--card);
+      max-width:560px;
+      width:90%;
+      border-radius:12px;
+      padding:20px;
+      transform: translateY(10px) scale(.98);
+      transition: transform 280ms cubic-bezier(.2,.9,.2,1), opacity 260ms ease;
+      opacity:0;
+      box-shadow: 0 30px 60px rgba(10,20,40,0.24);
+      border: 1px solid rgba(16,24,40,0.06);
+    }
+    .modal-backdrop.open .modal{
+      transform: translateY(0) scale(1);
+      opacity:1;
+    }
+
+    /* Keyframe bounce for attention */
+    @keyframes gentle-bounce{
+      0%{ transform: translateY(0) }
+      50%{ transform: translateY(-6px) }
+      100%{ transform: translateY(0) }
+    }
+    .badge{
+      display:inline-block;
+      background:#eef2ff;
+      color: #3730a3;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      animation: gentle-bounce 2200ms ease-in-out infinite;
+      margin-bottom:6px;
+    }
+
+    /* small responsive adjustments */
+    @media (max-width:860px){
+      .container{ grid-template-columns: 1fr; }
+      .img-wrap{ height:200px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <span class="badge">Transition Examples</span>
+      <h1>Interactive card with transitions</h1>
+      <p class="lead">Hover the card, image or button to see different transitions (transform, box-shadow, width, keyframes).</p>
+
+      <div class="grid" style="margin-top:14px">
+        <div>
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1200&auto=format&fit=crop" alt="sample" />
+          </div>
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Image zoom uses <code>transition: transform</code>.</p>
+        </div>
+
+        <div>
+          <h2 style="font-size:15px;margin-bottom:8px">Buttons & micro-interactions</h2>
+          <button class="btn" id="openModalBtn">Open modal <span class="arrow">➜</span></button>
+          <p style="margin-top:8px;color:var(--muted);font-size:13px">
+            Links underline using a width transition — <a class="link" href="#">learn more</a>
+          </p>
+        </div>
+
+        <div style="grid-column:1/-1;margin-top:8px;">
+          <h2 style="font-size:15px;margin-bottom:8px">Why transitions?</h2>
+          <p style="color:var(--muted);font-size:13px">
+            Transitions help make UI feel responsive and natural. Prefer transitions on transforms, opacity, and filters for smoother performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="card" aria-label="Sidebar">
+      <h1 style="font-size:16px">Quick cheatsheet</h1>
+      <ul style="margin-top:8px;color:var(--muted);line-height:1.7;font-size:13px">
+        <li><code>transition: property duration timing-function;</code></li>
+        <li>Use <code>transform</code> for GPU-accelerated motion.</li>
+        <li>Avoid transitions on layout-triggering props (width/height) when possible.</li>
+        <li>Combine with <code>@keyframes</code> for repeating animations.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Modal markup -->
+  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle" style="margin-bottom:6px">Modal with fade & scale</h2>
+      <p style="color:var(--muted);margin-bottom:16px">This modal uses a backdrop fade and modal scale/opacity transition when opening/closing.</p>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button id="closeModalBtn" class="btn" style="background:#ef4444; box-shadow: 0 8px 20px rgba(239,68,68,0.14)">Close</button>
+        <a href="#" class="btn" style="background:var(--accent)">Primary</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tiny JS just to toggle modal open class
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const backdrop = document.getElementById('modalBackdrop');
+
+    openBtn.addEventListener('click', () => {
+      backdrop.classList.add('open');
+      backdrop.setAttribute('aria-hidden', 'false');
+    });
+    closeBtn.addEventListener('click', () => {
+      backdrop.classList.remove('open');
+      backdrop.setAttribute('aria-hidden', 'true');
+    });
+    // close modal when clicking outside the modal content
+    backdrop.addEventListener('click', (evt) => {
+      if (evt.target === backdrop) {
+        backdrop.classList.remove('open');
+        backdrop.setAttribute('aria-hidden', 'true');
+      }
+    });
+    // close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        backdrop.classList.remove('open');
+        backdrop.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
