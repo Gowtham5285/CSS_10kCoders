@@ -32,7 +32,6 @@ a {text-decoration:none; color:white;}
 .hero-content h1 {
   font-size: 48px;
   letter-spacing: 4px;
-  background: rgba(0,0,0,0.5);
   padding: 10px 20px;
 }
 .br-box {
@@ -60,64 +59,3 @@ a {text-decoration:none; color:white;}
   color: white;
   font-size: 16px;
 }
-
-/* ---- About ---- */
-.about-text {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  text-align: center;
-}
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-}
-.team-card {
-  background: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-.team-card img {width:100%; height:auto;}
-.team-card h3 {margin:10px 0 5px;}
-.role {color: gray; margin-bottom:10px;}
-.team-card button {
-  border: none;
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-.team-card button:hover {background:#444;}
-
-/* ---- Contact ---- */
-.contact p {text-align:center; margin-bottom:20px;}
-.contact-form {
-  max-width:600px;
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-.contact-form input,
-.contact-form textarea {
-  width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-}
-.contact-form button {
-  background:black;
-  color:white;
-  padding:12px;
-  border:none;
-  cursor:pointer;
-}
-.contact-form button:hover {background:#444;}
-
-/* ---- Footer ---- */
-.footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-.footer a {color:#4CAF50;}
