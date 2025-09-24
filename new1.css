@@ -1,0 +1,22 @@
+.image-container {
+    position: relative;      /* parent must be relative for absolute child */
+    display: inline-block;   /* shrink-wraps around image */
+}
+
+.image-container img {
+    width: 100%;            /* example size */
+    height: auto;
+    display: block;
+}
+
+.center-text {
+    position: absolute;      /* position relative to .image-container */
+    top: 50%;                /* move down 50% of container height */
+    left: 50%;               /* move right 50% of container width */
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 10px 20px;      /* box-model: padding inside the box */
+    
+    text-align: center;     
+}
