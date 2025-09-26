@@ -1,0 +1,58 @@
+/*
+combinators
+------------
+ child combinator(>)
+      it applies the styles directly.
+ descendant combinator( ) (space)
+       it will applies the style inderictly & directly where it doesn't checks the immediate child or not. if it has paragraph in conatiner it will apply to all
+ Next sibling combinator(+) or adjacent sibling 
+       it will applies the style to next sibling only with same selctor   
+ Subsequent-sibling Combinator(~) or general sibling combinator
+        it will applies to the all siblings without any break like desecndant but for siblimgs
+ Syntax:- 
+       simpleSelector combinator simpleSelector{
+                   property:value;
+     }
+ */
+ /* .container > .item{
+    background-color: purple;
+    color: white;
+    margin: 10px;
+ } */
+ /* div~p{
+    color: red;
+ } */
+
+ /* 
+ display
+---------
+ How the container needs to be display
+ display:inline;
+ display:inline-block;
+ display:block;
+ display:none;
+ display:flex;
+ visiability:hidden;
+ display:grid
+
+  */
+  div{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin: 10px;
+    display: inline-block;
+    /* display: none; */
+    color: white;
+    visibility: hidden;
+  }
+  
+  span{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: green;
+    display: inline-block;
+    color: white;
+  }
+  
