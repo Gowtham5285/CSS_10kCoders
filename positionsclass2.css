@@ -1,5 +1,30 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/*
+  absolute-- checks the parent value 
+  fixed-- its fixes in one place
+  sticky-- it sticks in one place where we specify 
+ */
+ .grand-parent{
+    width: 500px;
+    height: 500px;
+    border: 5px solid red;
+    position: relative;
+ }
+/* .parent{
+    /* width: 200px;
+    height: 200px;
+    border: 5px solid; */
+    /* position: relative; */
+    /* top: 100px; */
+    /* left: 100px; */
+    /* right: -100px; */
+    /* bottom: -100px; */
+    /* position: absolute; */
+    /* right: 300px; */
+    /* bottom: 100px;
+    right: 200px; */
+    /* right: 250px; */
+    /* bottom: 250px;  */
+    /* left: 250px; */
+    /* top: 250px;  */
+    
+/* }*/ 
