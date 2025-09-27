@@ -1,0 +1,29 @@
+.container{
+    border: 2px solid;
+    height: 500px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+}
+.item{
+    padding: 10px;
+}
+.item-1{
+    background-color: chartreuse;
+}
+.item-2{
+    background-color: aqua;
+}
+.item-3{
+    background-color: hotpink;
+}
+.item-4{
+    background-color: mediumslateblue;
+}
+.item-5{
+    background-color: peru;
+}

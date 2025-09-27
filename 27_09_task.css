@@ -1,0 +1,11 @@
+.container{
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    height: 25px;
+}
+.nav-item{
+    color: black;
+    
+}

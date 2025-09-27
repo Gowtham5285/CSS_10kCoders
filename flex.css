@@ -1,0 +1,68 @@
+/*
+display:flex;
+-------------
+--inside childs will convert into inline block 
+--the display flex is one dimensional
+   -either row or column(x-axis or y-axis)
+--the display flex property need to use inside the parent elements
+in that child's will convert into flexibility
+justify-content:start,center,end,space-around,space-evenly,space-between
+ -- it works in x-axis.
+ --space-around - it gives you the space between the items in which the starting soace & ending space of item is equal
+ --space-evenly - it gives you the space evenly to the all items 
+ --space-between - it gives the space between the items. It starts with item & space followed by item and so on.
+*/
+.container{
+border: 2px solid black;
+display: flex;
+height: 300px;
+width: 400px;
+/* justify-content: start; */
+/* justify-content: end; */
+/* justify-content: end; */
+/* justify-content: space-around; */
+/* justify-content: space-evenly; */
+/* align-items: stretch;  it is default*/
+/* align-items: start; */
+/* align-items: center; */
+/* align-items: end; */
+/* align-items: end; */
+/* flex-direction: row; */
+/* flex-direction: column; */
+align-items: start;
+/* gap: 10px; only used for flex  */
+flex-wrap: wrap;
+/* align-content: start;  only used when we use wrap only */
+/* align-content: center; */
+align-content: space-around;
+}
+.container2{
+margin-top: 10px;
+border: 2px solid black;
+height: 300px;
+display: flex;
+/* justify-content: start; */
+/* justify-content: center; */
+/* justify-content: end; */
+/* justify-content: space-around; */
+justify-content: space-between;
+align-items: start;
+}
+.box{
+  padding: 5px;
+}
+.box-1{
+  background-color: limegreen;
+}
+.box-2{
+  background-color: blue;
+}
+.box-3{
+  background-color: red;
+}
+.box-4{
+  background-color: chocolate;
+}
+.box-5{
+  background-color: chartreuse;
+}
