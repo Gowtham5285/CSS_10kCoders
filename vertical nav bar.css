@@ -1,0 +1,60 @@
+ * {
+         box-sizing: border-box; 
+         margin: 0; 
+         padding: 0;
+    }
+
+    body { font-family: Arial, sans-serif; }
+
+    
+    .container {
+      display: flex;
+      flex-direction: column;     
+      justify-content: flex-start; 
+      align-items: center;         
+      width: 150px;
+      height: 100vh;
+      background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    
+    .nav_bar img {
+      width: 100px;
+      height: 100px;
+      margin: 22px 0;
+    }
+
+    
+    .uday {
+      display: flex;
+      flex-direction: column;  
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 14px 0;
+      cursor: pointer;
+      text-transform: uppercase; 
+      font-weight: 600;
+      letter-spacing: 0.6px;
+    }
+
+    
+    .uday i {
+      font-size: 28px;
+      margin-bottom: 8px; 
+      display: block;
+    }
+
+    
+    .uday .label {
+      font-size: 14px;
+    }
+
+    
+    .uday:hover {
+      background: rgba(0,0,0,0.35);
+    }

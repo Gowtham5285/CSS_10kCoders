@@ -1,0 +1,26 @@
+    .uday {
+      display: flex;                
+      justify-content: space-around; 
+      flex-wrap: wrap;              
+      margin: 20px;
+      /* padding:50px; */
+    }
+
+    .container {
+      text-align: center;          
+      width: 200px;                
+    }
+
+    .container img {
+      width: 100%;                 
+      height: auto;
+    }
+
+    .container p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .container span {
+      color: black;
+    }

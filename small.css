@@ -1,85 +1,61 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-.info1{
-    display: inline-block;
-    border: 2px solid black;
-    width: 450px;
-    text-align: center;
-    margin: 50px auto;
-    padding:20px ;
-    background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+  background: #f4f4f4;
+  padding: 20px;
 }
-.info1 img{
-    border: 2px solid violet;
-    margin-bottom: 15px;
+
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-.info1 h2{
-    margin: 20px;
-    font-size: 24px;
-    color: crimson;
+
+.product {
+  background: #fff;
+  width: 220px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
 }
-.info1 p{
-    
-    font-size: 20px;
-    text-align: justify;
-    line-height: 1.5;
-    color: dimgrey;
-    margin-top: 10px;
+
+
+.product img {
+  width: 100%;
+  height: auto;
 }
-.info2{
-    display: inline-block;
-    border: 2px solid black;
-    width: 450px;
-    text-align: center;
-    margin: 50px auto;
-    padding:20px ;
-    background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
+
+.product h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
 }
-.info2 img{
-    border: 2px solid violet;
-    margin-bottom: 15px;
+
+.product .price {
+  font-weight: bold;
+  color: #000;
 }
-.info2 h2{
-    margin: 20px;
-    font-size: 24px;
-    color: crimson;
+
+/* Badge Styles */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
 }
-.info2 p{
-    
-    font-size: 20px;
-    text-align: justify;
-    line-height: 1.5;
-    color: dimgrey;
-    margin-top: 10px;
+
+.badge.new {
+  background: #333;
 }
-.info3{
-    display: inline-block;
-    border: 2px solid black;
-    width: 450px;
-    text-align: center;
-    margin: 50px auto;
-    padding:20px ;
-    background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.info3 img{
-    border: 2px solid violet;
-    margin-bottom: 15px;
-}
-.info3 h2{
-    margin: 20px;
-    font-size: 24px;
-    color: crimson;
-}
-.info3 p{
-    
-    font-size: 20px;
-    text-align: justify;
-    line-height: 1.5;
-    color: dimgrey;
-    margin-top: 10px;
+
+.badge.sale {
+  background: #e74c3c;
 }
