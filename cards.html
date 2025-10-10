@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Cards</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+
+    .card > p {
+      font-size: 22px;
+      margin: 0;
+      color: #333;
+      transition: all 0.4s ease;
+    }
+
+    .card > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      border-radius: 15px;
+    }
+
+    .card:hover {
+      border: none;
+      border-radius: 50%;
+    }
+
+    .card:hover > p {
+      display: none;
+    }
+
+    .card:hover > img {
+      display: block;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <p>Image-1</p>
+      <img src="https://media.istockphoto.com/id/619670604/photo/morning-by-the-lake.jpg?s=612x612&w=0&k=20&c=AviOUUbKhr5opOFjbAk5jVfqevYL-3-LW2exmXcPqNA=" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-2</p>
+      <img src="https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?cs=srgb&dl=pexels-samkolder-2387866.jpg&fm=jpg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-3</p>
+      <img src="https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?cs=srgb&dl=pexels-rickyrecap-1586298.jpg&fm=jpg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-4</p>
+      <img src="https://i.pinimg.com/originals/3d/61/b0/3d61b06c639b6c43765c02b529d50b55.jpg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-5</p>
+      <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-6</p>
+      <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-7</p>
+      <img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg" alt="">
+    </div>
+
+    <div class="card">
+      <p>Image-8</p>
+      <img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg" alt="">
+    </div>
+  </div>
+</body>
+</html>
