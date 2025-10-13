@@ -1,0 +1,57 @@
+/* 
+pseudo elements in css
+----------------------
+marker - is used to make the list pointers into some other content like text, emoji
+ */
+ /* .para::before{
+    content: "Hi Hello!";
+    color: crimson;
+ }
+ p>span{
+    color: crimson;
+ } */
+ /* .second::first-letter{
+    font-size: xx-large;
+    color: gold;
+    text-transform: lowercase;
+ }
+ .second::first-line{
+    color: chartreuse;
+    text-transform: uppercase;
+ } */
+/* .second::selection{
+    color: red;
+    background-color: lightgreen;
+} */
+li::before{
+    content: "~";
+    font-size: xx-large;
+}
+li:nth-child(1)::marker{
+   color: darkviolet;
+   font-size: xx-large;
+}
+li:nth-child(2)::marker{
+    content: "😂";
+    font-size: xx-large;
+}
+input{
+    width: 100%;
+    padding: 20px;
+}
+input::placeholder{
+    font-size: xx-large;
+    letter-spacing: 2px;
+    color: darkgreen;
+}
+p{
+    width: 300px;
+    text-align: justify;
+    padding: 3px;
+    border: 2px solid black;
+    text-shadow: 5px 2px 10px red;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+/* create a blog para first-letter, text-shadow, letter-spacing, text-transform
+pseudo elements and with images */

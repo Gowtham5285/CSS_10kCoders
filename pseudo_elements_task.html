@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhas Chandra Bose - Simple Biopic</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+  }
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 650px;
+    margin: auto;
+    position: relative;
+  }
+  .image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px;
+    position: relative;
+  }
+  .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/jpeg;base64,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') center/cover no-repeat;
+    border-radius: 50%;
+  }
+  .image::after {
+    content: "🇮🇳";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 5px;
+  }
+  h1::before {
+    content: "🔥 ";
+  }
+  h1::after {
+    content: " 🔥";
+  }
+  h1 {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  p::first-letter {
+    font-size: 24px;
+    color: #e67e22;
+  }
+  p::before {
+    content: "💬 ";
+  }
+  p::after {
+    content: " 💪";
+  }
+  .quote {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    position: relative;
+  }
+  .quote::before {
+    content: '“';
+    position: absolute;
+    left: -10px;
+    color: #999;
+  }
+  .quote::after {
+    content: '”';
+    color: #999;
+  }
+  .container:hover::after {
+    content: "✨ You hovered over Netaji's story! ✨";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #0b6f9a;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="image"></div>
+    <h1>Subhas Chandra Bose</h1>
+    <p>Subhas Chandra Bose, fondly known as Netaji, was one of India’s most courageous freedom fighters. His slogan “Jai Hind” became the battle cry of the Indian independence movement. 🇮🇳</p>
+    <p>Born on 23 January 1897 in Cuttack, Odisha, Netaji was a brilliant student and a visionary leader. He cleared the Indian Civil Services exam but resigned to serve his country’s struggle for freedom. ✊</p>
+    <p>He formed the Indian National Army (INA) to fight British colonial rule, believing that freedom could only be achieved through action. His leadership inspired countless Indians to rise with pride and patriotism. 💥</p>
+    <p>Even today, his famous words — “Give me blood, and I will give you freedom!” — echo in the hearts of millions who honor his courage and sacrifice. 🌟</p>
+    <div class="quote">Give me blood, and I will give you freedom!</div>
+  </div>
+</body>
+</html>
