@@ -1,0 +1,77 @@
+/* 
+units in css
+------------ 
+  1. absolute
+     px,in,cm,mm
+  2. relative
+      % - checks the parent container width & height
+           default width of viewport-100%
+
+      vh - it is related to the view port. It will find the view port height
+           note:- it won't check the parent container height
+
+      rem - it is the root element of font size
+            the root element font-size is 16px
+            it will only find the root element font size
+            note:- this rem need to use only for font-size
+
+      vw - it is related to the view port. It will find the view port width
+           note:- it won't check the parent container width
+      em - it is the parent element font-size
+           the default em font-size is root element font-size
+           it will check the root element font-size if parent element font-size is not there
+           note:- this em need to use only for font-size
+ */
+ /* body,html{
+    height: 100%;
+ }
+ .parent{
+    width: 50%;
+    height: 50%;
+    background-color: darkred;
+    border: 2px solid;
+ }
+.child{
+    width:50%;
+    height: 50%;
+    background-color: blue;
+}
+.green{
+    width: 50%;
+    height: 50px;
+    background-color: grey;
+    margin-top: 10px;
+}
+.item{
+    background-color: green;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+} */
+ /* body,html{
+    height: 100%;
+ }
+ body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .container{
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+ } */
+  :root{
+    font-size: 50px;
+  }
+  .rem{
+    width: 2rem;
+    height: 2rem;
+    font-size: 10px;
+    background-color: red;
+  }
+  .em{
+    width: 1em;
+    height: 1em;
+    background-color: gray;
+  }
