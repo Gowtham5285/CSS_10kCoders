@@ -1,57 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hinata Card</title>
-  <style>
-    * {
-      margin: 0;
-      box-sizing: border-box;
-    }
-    .info1 {
-      display: inline-block;  /* makes span act like a card */
-      border: 2px solid black;
-      width: 300px;
-      text-align: center;
-      margin: 20px;
-      padding: 15px;
-      background-color: antiquewhite;
-      font-family: Arial, Helvetica, sans-serif;
-      border-radius: 12px;  /* rounded card edges */
-      box-shadow: 2px 4px 8px rgba(0,0,0,0.2); /* shadow for card effect */
-    }
-    .info1 img {
-      border: 2px solid violet;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    .info1 h2 {
-      margin: 10px 0;
-      font-size: 22px;
-      color: crimson;
-    }
-    .info1 p {
-      font-size: 16px;
-      text-align: justify;
-      line-height: 1.5;
-      color: dimgrey;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cafe</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Inconsolata", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Inconsolata", sans-serif;
+            letter-spacing: 4px;
+            margin: 10px 0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header and Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.16);
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 16px;
+        }
+        
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-links a {
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #000;
+            letter-spacing: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: #ccc;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('https://www.w3schools.com/w3images/coffeehouse.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 75vh;
+            margin-top: 46px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 90px;
+            margin-bottom: 40px;
+        }
+        
+        .hero p {
+            display: inline-block;
+            background-color: #000;
+            padding: 8px 16px;
+            margin: 0 5px;
+        }
+        
+        .open-time {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #000;
+            color: white;
+            padding: 8px 16px;
+        }
+        .address {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            padding: 8px 16px;
+        }
+        
+        /* Main Content */
+        .content-section {
+            padding: 64px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* About Section */
+        .about-text {
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            width: 100%;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+        
+        .about-highlight {
+            background-color: #f1f1f1;
+            padding: 8px 16px;
+            border-left: 4px solid #ccc;
+            margin: 20px 0;
+        }
+        
+        /* Menu Section */
+        .menu-category {
+            margin-bottom: 40px;
+        }
+        
+        .menu-item {
+            margin-bottom: 20px;
+        }
+        
+        .menu-item h4 {
+            font-weight: bold;
+        }
+        
+        .menu-item p {
+            color: #757575;
+            margin: 10px 0;
+        }
+        
+        .menu-image {
+            width: 100%;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        
+        .contact-form button {
+            background-color: #f1f1f1;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .contact-form button:hover {
+            background-color: #ccc;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 15px 0;
+        }
+        
+        .footer a {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-  <span class="info1">
-    <img src="https://wallpapercat.com/w/full/1/4/f/2143776-1920x1080-desktop-1080p-hinata-naruto-wallpaper-image.jpg" 
-         alt="Hinata Hyuga">
-    <h2>Hinata Hyuga</h2>
-    <p>
-      Hinata Hyuga is a kunoichi from the Hyuga Clan, one of the strongest clans in Konoha. 
-      She possesses the Byakugan, granting her near 360° vision and precise chakra control. 
-      Known for her gentle and shy nature, she admired Naruto Uzumaki and drew strength from him. 
-      Skilled in the Gentle Fist technique, she strikes chakra points with accuracy. 
-      Eventually, Hinata marries Naruto and becomes the loving mother of Boruto and Himawari.
-    </p>
-  </span>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#menu">MENU</a>
+                <a href="#where">WHERE</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>the<br>Cafe</h1>
+            <div class="open-time">
+                <p>Open from 6am to 5pm</p>
+            </div>
+        </div>
+        <div class="address">
+            <p>15 Adr street, 5015</p>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- About Section -->
+        <section class="content-section" id="about">
+            <h2 class="section-title">ABOUT THE CAFE</h2>
+            <p class="about-text">
+                The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="about-text">
+                In addition to our full espresso and brew bar menu, we serve fresh made-to-order 
+                breakfast and lunch sandwiches, as well as a selection of sides and salads and 
+                other good stuff.
+            </p>
+            <div class="about-highlight">
+                <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+                <p>Chef, Coffeeist and Owner: Liam Brown</p>
+            </div>
+            <img src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="Cafe interior" class="about-image">
+            <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+            <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="content-section" id="menu">
+            <h2 class="section-title">THE MENU</h2>
+            
+            <div class="menu-category">
+                <h3>Eat</h3>
+                <div class="menu-item">
+                    <h4>Bread Basket</h4>
+                    <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Honey Almond Granola with Fruits</h4>
+                    <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Belgian Waffle</h4>
+                    <p>Vanilla flavored batter with malted flour 7.50</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Scrambled eggs</h4>
+                    <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Blueberry Pancakes</h4>
+                    <p>With syrup, butter and lots of berries 8.50</p>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h3>Drink</h3>
+                <div class="menu-item">
+                    <h4>Coffee</h4>
+                    <p>Regular coffee 2.50</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Chocolato</h4>
+                    <p>Chocolate espresso with milk 4.50</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Corretto</h4>
+                    <p>Whiskey and coffee 5.00</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Iced tea</h4>
+                    <p>Hot tea, except not hot 3.00</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Soda</h4>
+                    <p>Coke, Sprite, Fanta, etc. 2.50</p>
+                </div>
+            </div>
+            
+            <img src="https://www.w3schools.com/w3images/coffeehouse2.jpg" alt="Coffee" class="menu-image">
+        </section>
+
+        <!-- Where to Find Us Section -->
+        <section class="content-section" id="where">
+            <h2 class="section-title">WHERE TO FIND US</h2>
+            <p class="contact-info">Find us at some address at some place.</p>
+            <img src="https://www.w3schools.com/w3images/map.jpg" alt="Location map" class="about-image">
+            <p class="contact-info">
+                <span class="highlight">FYI!</span> We offer full-service catering for any event, large or small. 
+                We understand your needs and we will cater the food to satisfy the biggest criteria of them all, both look and taste.
+            </p>
+            <p class="contact-info">
+                <strong>Reserve</strong> a table, ask for today's special or just send us a message:
+            </p>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="number" placeholder="How many people" required>
+                <input type="datetime-local" value="2020-11-16T20:00">
+                <input type="text" placeholder="Message \ Special requirements">
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by <a href="#">w3.css</a></p>
+    </footer>
 </body>
 </html>

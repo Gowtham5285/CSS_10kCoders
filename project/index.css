@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    font-family: "Inconsolata",sans-serif;
+}
+.nav-container{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: +1;
+    width: 100%;
+}
+.nav-container>.nav-item{
+    width: 300px;
+    text-align: center;
+    padding: 8px;
+    transition: 0.8s ease;
+}
+.nav-item:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.bg-container{
+    height: 73%;
+    background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bg-container>.text-container{
+    font-size: 7rem;
+    text-align: center;
+    color: white;
+    line-height: 140px;
+
+}
+.bg-container>.text-container-2{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+}
+.bg-container>.text-container-3{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.main-container>.main{
+    width: 50%;
+    /* border: 2px solid; */
+    height: 2000px;
+}
+.about{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+.about>p{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    width: fit-content;
+    letter-spacing: 5px;
+}
+.ceo{
+    text-align: justify;
+    line-height: 25px;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.stuff{
+    text-align: justify;
+    line-height: 25px;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 10px 0px;
+
+}
+.cheff{
+    padding: 30px;
+    background-color: rgb(150, 183, 183);
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: rgba(0, 0, 0, 0.244);
+}
+.cheff>.quote{
+    margin: 10px 0px;
+}
+.cheff>.owner{
+    margin: 10px 0px;
+}
+.image{
+    margin: 20px 0px;
+}
+.image>img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+.hover,.address{
+    margin: 10px 0px;
+}
+.menu{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+.menu>p{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    width: fit-content;
+    letter-spacing: 5px;
+}
