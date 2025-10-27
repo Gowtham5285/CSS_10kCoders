@@ -1,0 +1,38 @@
+/*
+media queries
+-------------
+RWD
+---
+1. Meta view-port
+2. box-sizing
+3. flex
+4. grid
+5. media query
+
+@media screen/all/print and (break-point){
+      selector{
+      property:value;
+      }
+}
+three types of views
+1. Mobile view:557px
+2. Tablet view:890px
+3. Desktop view:1200px
+ */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ .container{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+ }
+ @media screen and (max-width:557px) {
+    .container{
+        background-color: blue;
+    }
+    
+ }
+ 
