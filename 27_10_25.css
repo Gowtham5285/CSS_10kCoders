@@ -14,7 +14,6 @@ grid
     /* grid-template-rows: 100px 100px; */
  }
  .item{
-    background-color: aqua;
     padding: 5px;
     font-size: 1.5rem;
     text-align: center;

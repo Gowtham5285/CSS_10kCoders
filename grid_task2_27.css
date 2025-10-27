@@ -1,0 +1,37 @@
+.nav{
+    height: 100vh;
+    border: 2px solid;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5,1fr);
+}
+.item{
+    padding: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.item-1{
+    background-color: aqua;
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
+.item-2{
+    background-color: orange;
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+.item-3{
+    background-color: darkviolet;
+}
+.item-4{
+    background-color: green;
+}
+.item-5{
+    background-color: brown;
+}
+.item-6{
+    background-color: chartreuse;
+}
+.item-7{
+    background-color: blue;
+}
