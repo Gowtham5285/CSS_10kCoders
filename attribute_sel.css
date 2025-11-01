@@ -1,0 +1,63 @@
+/* 
+Attribute Selectors
+-------------------
+CSS attribute selectors are used to select and style HTML 
+elements with a specific attribute or attribute value, or both.
+types
+- a[href] -- applies styling on the mentioned attribute 
+- a[target="_blank"] -- Selects elements whose attribute exactly matches the given value.
+- a[href^="https"] -- Selects elements whose attribute starts with a specific value.
+- a[href$=".org"] -- Selects elements whose attribute ends with a specific value.
+- a[href*="sololeveling"] -- Selects elements whose attribute contains a specific substring.
+- a[class~="highlighted"] -- Selects elements whose attribute contains a word (space-separated list) equal to value.
+- a[href|="en"] -- Selects elements whose attribute is exactly “value” or starts with “value-” (used for language codes).
+- a[href*="naruto"][target="_blank"] -- combination
+ */
+body,html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    margin: 20px;
+    font-size: 2rem;
+}
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+input{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    
+}
+/* a[href]{
+    background-color: yellow;
+}
+a[target="_blank"]{
+    background-color: chartreuse;
+}
+a[href*="naruto"]{
+    color: black;
+}
+p[class="para"]{
+    background-color: crimson;
+}
+
+img[src$=".jpg"]{
+    border-radius: 100px;
+}
+div[class~=highlighted]{
+    font-family: 'Courier New', Courier, monospace;
+} */
+ /* a[target|="_blank"]{
+    color: black;
+ } */
+input[type="text"]{
+    background-color: lightgray;
+}
