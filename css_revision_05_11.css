@@ -1,0 +1,63 @@
+/*
+simple-
+  element - tagname
+  class - ".clsname"
+  id - "#idname"
+  * - universal Selector
+  grouping selector - ,
+
+Combinators
+-----------
+child Selector - >
+Descendent selector - space
+Next sibling - +
+General Sibling - ~
+
+Psclass
+-------
+:hover
+:visited
+:active
+:checked
+:first-child
+:nth-child
+:nth-last-child
+:root
+
+Pelements
+----------
+::before
+::after
+::marker
+::placeholder
+::selection
+::first-letter
+::first-line
+
+attribute selectors
+-------------------
+[attr]
+[attr="value"]
+
+
+Position
+--------
+static, absolute(checks ancestors) , relative, sticky(we have to stick it using top, left, right, bottom), fixed(just fix it);
+
+Box-model
+---------
+padding: top bottom left bottom;
+margin: : top bottom left bottom; - applies negative values
+border: width style color;
+content: width, height;
+
+Display
+-------
+inline, inline-block, block, flex, grid, none
+
+-- Flex: 1D 
+  justify-content: center, start, end, space-evenly, space-between, space-around
+  align-items: center, start, end, space-evenly, space-between, space-around
+
+-- Grid: 2D Layouts
+ */
