@@ -1,9 +1,1143 @@
-body,html{
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff;
+  color: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #002147;
+  font-weight: 600;
+  font-size: .9rem;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.dropdown a:hover {
+  color: #004c99;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  min-width: 160px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  z-index: 10;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: #002147;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.dropdown-content a:hover {
+  background: #f4f4f4;
+  color: #004c99;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* --- Video container --- */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* --- YouTube iframe full screen fix --- */
+.video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* 16:9 ratio relative to viewport height */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 56.25vw;
+  border: none;
+  pointer-events: none;
+}
+
+/* --- Overlay text --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* --- Text styles --- */
+.hero-overlay h5 {
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.hero-overlay h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* --- Button styles --- */
+.btn {
+  background: #002147;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #004c99;
+}
+
+/* --- Responsive (mobile) --- */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ---------- SANCTUARY ---------- */
+.sanctuary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 40px;
+  background: #fff;
+}
+
+.sanctuary-box {
+  max-width: 900px;
+  text-align: center;
+  padding: 60px 40px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .03);
+}
+
+.sanctuary h2 {
+  font-size: 2rem;
+  color: #002147;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: #ccc;
+  margin: 0 auto 25px;
+}
+
+.sanctuary p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ---------- RETREATS ---------- */
+.retreats {
+  background: #fff;
+  padding: 40px 20px 100px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #002147;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.retreats-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.retreat-card {
+  flex: 0 0 300px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+  transition: .3s;
+}
+
+.retreat-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeCycle 8s infinite ease-in-out;
+}
+
+.image-slider img.fade1 { animation-delay: 0s; }
+.image-slider img.fade2 { animation-delay: 4s; }
+
+@keyframes fadeCycle {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.retreat-text {
+  padding: 20px 15px 30px;
+}
+
+.retreat-text h5 {
+  color: #002147;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.retreat-text p {
+  color: #666;
+  font-size: .95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn {
+  text-decoration: none;
+  font-size: .85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #002147;
+  letter-spacing: 1px;
+}
+
+.learn:hover {
+  color: #004c99;
+}
+
+/* ---------- PARALLAX SECTION ---------- */
+.parallax-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+.parallax-bg {
+  background-image: url('https://prium.github.io/nirvana/v2.0.0/assets/images/features-1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  transform: translateZ(-1px) scale(2);
+  filter: brightness(65%);
+  z-index: 1;
+}
+
+.parallax-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.parallax-inner h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.parallax-inner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #002147;
+}
+
+/* ---------- INFO SECTIONS ---------- */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 40px;
+}
+
+.info-section img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.info-text { width: 50%; }
+.info-text h3 { color: #002147; font-size: 1.8rem; margin-bottom: 20px; }
+.info-text p { color: #555; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+.reverse { flex-direction: row-reverse; }
+
+/* ---------- REST & RELAX CAROUSEL ---------- */
+.relax-carousel {
+  position: relative;
+  width: 45%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.relax-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: relaxSlide 15s infinite ease-in-out;
+}
+
+.relax-carousel img.s1 { animation-delay: 0s; }
+.relax-carousel img.s2 { animation-delay: 5s; }
+.relax-carousel img.s3 { animation-delay: 10s; }
+
+@keyframes relaxSlide {
+  0%, 20% { opacity: 1; transform: scale(1); }
+  25%, 100% { opacity: 0; transform: scale(1.05); }
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.testimonial-box {
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+.testimonial-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-box p {
+  font-size: 1.05rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-box h6 {
+  color: #002147;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ---------- MOBILE MENU FIX ---------- */
+#menu-toggle {
+  position: absolute;
+  left: -9999px;
+  appearance: none;
+  opacity: 0;
+}
+
+.mobile-menu { display: none; }
+.menu-icon { display: none; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .nav-left, .nav-right { display: none; }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-icon span {
+    height: 2px;
+    background: #002147;
+    border-radius: 2px;
+    transition: .3s;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+  #menu-toggle:checked + .menu-icon span:nth-child(2) { opacity: 0; }
+  #menu-toggle:checked + .menu-icon span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .mobile-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 70px;
+    height: calc(100vh - 70px);
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 12px 16px 24px;
+    overflow: auto;
+    display: none;
+    z-index: 999;
+  }
+
+  #menu-toggle:checked ~ .mobile-menu {
+    display: block;
+    animation: slideDown .25s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .mobile-menu details {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 8px 0;
+  }
+
+  .mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #002147;
+    padding: 10px 4px;
+  }
+
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu summary::after { content: "▾"; font-size: .9rem; transition: transform .2s; }
+  .mobile-menu details[open] summary::after { transform: rotate(180deg); }
+
+  .mobile-menu a {
+    display: block;
+    text-decoration: none;
+    color: #002147;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 2px 4px;
+    font-weight: 500;
+  }
+
+  .mobile-menu a:hover { background: #f6f9ff; color: #004c99; }
+
+  /* Info & relax responsive */
+  .info-section, .reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .info-text, .info-section img, .relax-carousel {
     width: 100%;
-    height: 100%;
+  }
+
+  .relax-carousel {
+    height: 260px;
+  }
+
+  .hero-overlay h1 { font-size: 2.2rem; }
+  .hero-overlay p { font-size: 1rem; }
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ---------- EXPLORE NATURE (Centered) ---------- */
+.explore-nature {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  background: url("https://prium.github.io/nirvana/v2.0.0/assets/images/features-2.jpg")
+    center / cover fixed no-repeat;
+  overflow: hidden;
 }
+
+.explore-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay for contrast */
+  z-index: 1;
+}
+
+/* ✅ perfect centering */
+.explore-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.explore-content h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.explore-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #002147;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .explore-nature {
+    height: 80vh;
+    background-attachment: scroll; /* smoother on mobile */
+  }
+
+  .explore-content h2 {
+    font-size: 2rem;
+  }
+
+  .explore-content p {
+    font-size: 1rem;
+  }
+
+  .btn-outline {
+    padding: 10px 30px;
+  }
+}
+/* ---------- ORGANIC CUISINE IMAGE CAROUSEL ---------- */
+.image-carousel {
+  position: relative;
+  width: 45%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeCarousel 15s infinite;
+  transition: opacity 1s ease-in-out;
+}
+
+/* assign images and delays */
+.slide1 {
+  background-image: url("https://prium.github.io/nirvana/v2.0.0/assets/images/features-7.jpg");
+  animation-delay: 0s;
+}
+.slide2 {
+  background-image: url("https://prium.github.io/nirvana/v2.0.0/assets/images/features-8.jpg");
+  animation-delay: 5s;
+}
+.slide3 {
+  background-image: url("https://prium.github.io/nirvana/v2.0.0/assets/images/features-9.jpg");
+  animation-delay: 10s;
+}
+
+@keyframes fadeCarousel {
+  0%, 8% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .info-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-text {
+    width: 100%;
+    order: 2;
+  }
+
+  .image-carousel {
+    width: 100%;
+    height: 250px;
+    order: 1;
+  }
+}
+/* ---------- RESERVE YOUR ADVENTURE SECTION ---------- */
+.reserve-adventure {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("https://prium.github.io/nirvana/v2.0.0/assets/images/cta.jpg")
+    center / cover fixed no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.reserve-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* subtle dark overlay */
+  z-index: 1;
+}
+
+.reserve-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+.reserve-content h2 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.reserve-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+  margin-bottom: 35px;
+}
+
+/* Reuse your existing button style */
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #002147;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .reserve-adventure {
+    height: 85vh;
+    background-attachment: scroll; /* better for mobile rendering */
+  }
+
+  .reserve-content h2 {
+    font-size: 2rem;
+  }
+
+  .reserve-content p {
+    font-size: 1rem;
+  }
+
+  .btn-outline {
+    padding: 10px 30px;
+  }
+}
+/* ---------- CLEAN TESTIMONIAL SECTION ---------- */
+.testimonial-clean {
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.testimonial-clean h2 {
+  color: #002147;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.testimonial-clean .divider {
+  width: 80px;
+  height: 2px;
+  background: #ccd4e0;
+  margin: 0 auto 50px;
+}
+
+/* ---------- SLIDER CORE ---------- */
+.testimonial-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* ---------- IMAGE ---------- */
+.testimonial img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #002147;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+/* ---------- TEXT ---------- */
+.testimonial p {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  max-width: 600px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.testimonial h4 {
+  color: #002147;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.testimonial span {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* ---------- DOTS ---------- */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  display: inline-block;
+  animation: dotCycle 18s infinite;
+}
+
+.dots span:nth-child(1) { animation-delay: 0s; }
+.dots span:nth-child(2) { animation-delay: 6s; }
+.dots span:nth-child(3) { animation-delay: 12s; }
+
+@keyframes dotCycle {
+  0%, 10% { background: #002147; }
+  30%, 100% { background: #ccc; }
+}
+
+/* ---------- ANIMATION CYCLE ---------- */
+.testimonial:nth-child(1) { animation: show 18s infinite; animation-delay: 0s; }
+.testimonial:nth-child(2) { animation: show 18s infinite; animation-delay: 6s; }
+.testimonial:nth-child(3) { animation: show 18s infinite; animation-delay: 12s; }
+
+@keyframes show {
+  0%, 10% { opacity: 1; }
+  30%, 100% { opacity: 0; }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .testimonial-clean {
+    padding: 60px 15px;
+  }
+
+  .testimonial img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+/* ---------- FEATURED LOGO CAROUSEL ---------- */
+.featured-carousel {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-carousel h4 {
+  color: #002147;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* ---------- SLIDER ---------- */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 16); /* width of each image * total number */
+  animation: scrollLogos 40s linear infinite;
+}
+
+.logo-track img {
+  width: 200px;
+  height: auto;
+  margin: 0 30px;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ---------- SCROLL ANIMATION ---------- */
+@keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .logo-track img {
+    width: 120px;
+    margin: 0 15px;
+  }
+  .featured-carousel h4 {
+    font-size: 1.2rem;
+  }
+}
+/* ---------- FOOTER SECTION ---------- */
+.footer-nirvana {
+  background: #002147;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px 40px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.footer-top {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Links Row */
+.footer-links {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #b0c7e8;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 90px;
+  height: auto;
+  margin-top: 15px;
+}
+
+/* Contact Info */
+.footer-contact p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-contact span {
+  opacity: 0.6;
+}
+
+/* Newsletter Form */
+.footer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-form input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  width: 280px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.footer-form button {
+  padding: 12px 30px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-form button:hover {
+  background: #fff;
+  color: #002147;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 25px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #b0c7e8;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-form input {
+    width: 220px;
+  }
+
+  .footer-form button {
+    padding: 10px 20px;
+  }
+}
+

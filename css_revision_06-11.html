@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar with Logo</title>
+<style>
+  /* Basic page setup */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navbar container takes 15% height */
+  .navbar {
+    height: 15%;
+    width: 100%;
+    background: #222;
+    display: flex;
+    align-items: center;   /* vertically center logo */
+    justify-content: space-between; /* space for links if needed */
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  /* Logo image control */
+  .navbar img {
+    height: 80%;          /* fills 80% of nav height */
+    width: auto;          /* maintains aspect ratio */
+    object-fit: contain;  /* ensures image isn't cropped */
+  }
+
+  /* Optional placeholder nav links */
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo-nirvana.png" alt="Nirvana Logo">
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+</body>
+</html>
