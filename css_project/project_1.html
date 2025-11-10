@@ -1,37 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./project_1.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirvana – Yoga & Retreats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css_project/project_1.css" />
 </head>
-
 <body>
-    <!-- nav Container -->
-    <div class="nav-bar">
-        <div class="container container-1">
-            <div class="Home">HOME</div>
-            <div class="Pages">PAGES</div>
-            <div class="retreats">RETREATES</div>
-        </div>
-        <div class="image-1">
-            <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo-nirvana.png" alt="">
-        </div>
-        <div class="container container-2">
-            <div class="Blog">BLOG</div>
-            <div class="Content">CONTENT</div>
-            <div class="Components">COMPONENTS</div>
-            <div class="Docs">DOCS</div>
-        </div>
-    </div>
-    <!-- Video Container -->
-     <div class="video-container">
-        <video controls>
-            <source src="">
-        </video>
-     </div>
-</body>
 
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <!-- Left Links -->
+      <nav class="nav-left">
+        <div class="dropdown">
+          <a href="#">HOME ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Landing Page</a>
+            <a href="#">Yoga Page</a>
+            <a href="#">Retreat Page</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">PAGES ▾</a>
+          <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Our Story</a>
+            <a href="#">Gallery</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">RETREATS ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Yoga & Fitness</a>
+            <a href="#">Herbal Medicine</a>
+            <a href="#">Surfing Trips</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Center Logo -->
+      <a href="#" class="logo">
+        <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo-nirvana.png" alt="Nirvana Logo" />
+      </a>
+
+      <!-- Right Links -->
+      <nav class="nav-right">
+        <div class="dropdown">
+          <a href="#">BLOG ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Latest Posts</a>
+            <a href="#">Wellness</a>
+            <a href="#">Guides</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">CONTACT ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Email</a>
+            <a href="#">Support</a>
+            <a href="#">Location</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">COMPONENTS ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Cards</a>
+            <a href="#">Buttons</a>
+            <a href="#">Forms</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">DOCS ▾</a>
+          <div class="dropdown-content">
+            <a href="#">HTML Structure</a>
+            <a href="#">CSS Guide</a>
+            <a href="#">License</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ===== MOBILE MENU ===== -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+
+      <nav class="mobile-menu">
+        <details>
+          <summary>Home</summary>
+          <a href="#">Landing Page</a>
+          <a href="#">Yoga Page</a>
+          <a href="#">Retreat Page</a>
+        </details>
+
+        <details>
+          <summary>Pages</summary>
+          <a href="#">About Us</a>
+          <a href="#">Our Story</a>
+          <a href="#">Gallery</a>
+        </details>
+
+        <details>
+          <summary>Retreats</summary>
+          <a href="#">Yoga & Fitness</a>
+          <a href="#">Herbal Medicine</a>
+          <a href="#">Surfing Trips</a>
+        </details>
+
+        <details>
+          <summary>Blog</summary>
+          <a href="#">Latest Posts</a>
+          <a href="#">Wellness</a>
+          <a href="#">Guides</a>
+        </details>
+
+        <details>
+          <summary>Contact</summary>
+          <a href="#">Email</a>
+          <a href="#">Support</a>
+          <a href="#">Location</a>
+        </details>
+
+        <details>
+          <summary>Components</summary>
+          <a href="#">Cards</a>
+          <a href="#">Buttons</a>
+          <a href="#">Forms</a>
+        </details>
+
+        <details>
+          <summary>Docs</summary>
+          <a href="#">HTML Structure</a>
+          <a href="#">CSS Guide</a>
+          <a href="#">License</a>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO / VIDEO ================= -->
+  <section class="hero">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/NXvgDydGjy0?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&fs=0&playlist=NXvgDydGjy0&start=0&end=6"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="hero-overlay">
+      <h5>WELCOME TO</h5>
+      <h1>NIRVANA<br>LIVELINESS</h1>
+      <p>Retreats · Adventure · Spa</p>
+      <a href="#" class="btn">OUR STORY</a>
+    </div>
+  </section>
+
+  <!-- ================= SANCTUARY ================= -->
+  <section class="sanctuary">
+    <div class="sanctuary-box">
+      <h2>A sanctuary of escape<br>to help people reset themselves</h2>
+      <div class="divider"></div>
+      <p>A luxury yoga, fitness & wellbeing holiday focusing on your health in Mind, Body and Skin.
+        Harmonize your body, mind & soul with yoga. Do your practice and peace will come.</p>
+    </div>
+  </section>
+
+  <!-- ================= RETREATS ================= -->
+  <section class="retreats">
+    <h3 class="section-title">Retreats Coming</h3>
+    <div class="divider"></div>
+
+    <div class="retreats-grid">
+      <div class="retreat-card">
+        <div class="image-slider">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-3.jpg" class="fade fade1">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-4.jpg" class="fade fade2">
+        </div>
+        <div class="retreat-text">
+          <h5>YOGA & FITNESS</h5>
+          <p>Balance your mind and body with Yoga. Create healthy living for yourself.</p>
+          <a href="#" class="learn">LEARN MORE ➜</a>
+        </div>
+      </div>
+
+      <div class="retreat-card">
+        <div class="image-slider">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-2.jpg" class="fade fade1">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-5.png" class="fade fade2">
+        </div>
+        <div class="retreat-text">
+          <h5>HERBAL MEDICINE</h5>
+          <p>Blending traditional and scientific methods for a healthy lifestyle.</p>
+          <a href="#" class="learn">LEARN MORE ➜</a>
+        </div>
+      </div>
+
+      <div class="retreat-card">
+        <div class="image-slider">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-1.jpg" class="fade fade1">
+          <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/retreats-6.png" class="fade fade2">
+        </div>
+        <div class="retreat-text">
+          <h5>GUIDED SURFING TRIP</h5>
+          <p>Experience thrill and peace on guided surf adventures in the open sea.</p>
+          <a href="#" class="learn">LEARN MORE ➜</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PARALLAX ================= -->
+  <section class="parallax-section">
+    <div class="parallax-bg"></div>
+    <div class="parallax-inner">
+      <h2>Spa & Bath</h2>
+      <p>We offer the ideal atmosphere for relaxation and personal care. A real treat for the body and mind that helps you balance work and stress.</p>
+      <a href="#" class="btn-outline">LEARN MORE</a>
+    </div>
+  </section>
+
+  <!-- ================= REST & RELAX ================= -->
+  <section class="info-section">
+    <div class="info-text">
+      <h3>Rest & Relax</h3>
+      <p>Our retreat invites you to unwind, relax, and rejuvenate your senses. Enjoy serene landscapes and tranquil yoga sessions by the sea.</p>
+      <a href="#" class="learn">LEARN MORE ➜</a>
+    </div>
+    <div class="relax-carousel">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/features-4.jpg" class="slide s1" alt="Relax 1">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/features-5.jpg" class="slide s2" alt="Relax 2">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/features-6.jpg" class="slide s3" alt="Relax 3">
+    </div>
+  </section>
+  <!-- ================= EXPLORE NATURE SECTION ================= -->
+<section class="explore-nature">
+  <div class="explore-overlay">
+    <div class="explore-content">
+      <h2>Explore Nature</h2>
+      <p>
+        When all the world appears to be in a tumult, and nature itself is feeling the assault of climate change,
+        the seasons retain their essential rhythm.
+      </p>
+      <a href="#" class="btn-outline">LEARN MORE</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORGANIC CUISINE ================= -->
+<section class="info-section reverse">
+  <div class="info-text">
+    <h3>Organic Cuisine</h3>
+    <p>
+      Indulge in nourishing, organic meals crafted with love.  
+      Our cuisine brings wellness from the inside out, balancing body and spirit.
+    </p>
+    <a href="#" class="learn">LEARN MORE ➜</a>
+  </div>
+
+  <!-- ✅ Pure CSS Carousel -->
+  <div class="image-carousel">
+    <div class="carousel-slide slide1"></div>
+    <div class="carousel-slide slide2"></div>
+    <div class="carousel-slide slide3"></div>
+  </div>
+</section>
+<!-- ================= RESERVE YOUR ADVENTURE ================= -->
+<section class="reserve-adventure">
+  <div class="reserve-overlay"></div>
+  <div class="reserve-content">
+    <h2>Reserve Your Adventure</h2>
+    <p>
+      Discover the world you've never seen, explore the horizon you never reached,
+      unravel the mystery of nature. Reserve your life-changing adventurous journey
+      today with Nirvana along with Spa, Yoga, and more healthy retreats.
+    </p>
+    <a href="#" class="btn-outline">INQUIRE</a>
+  </div>
+</section>
+
+ <!-- ================= FIXED TESTIMONIALS ================= -->
+<section class="testimonial-clean">
+  <h2>Testimonials</h2>
+  <div class="divider"></div>
+
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/fitness-1.jpg" alt="Jack Foster">
+      <p>“Keep close to Nature’s heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.”</p>
+      <h4>JACK FOSTER</h4>
+      <span>Marketing Manager</span>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/fitness-2.jpg" alt="Emma Stone">
+      <p>“The Nirvana retreat completely changed my perspective. The calm energy and environment healed me in ways I can’t explain.”</p>
+      <h4>EMMA STONE</h4>
+      <span>Yoga Instructor</span>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/fitness-3.jpg" alt="Ryan Lee">
+      <p>“A truly life-changing experience! The blend of wellness, nature, and community brought balance to my mind and body.”</p>
+      <h4>RYAN LEE</h4>
+      <span>Adventure Coach</span>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span></span><span></span><span></span>
+  </div>
+</section>
+
+
+<!-- ================= FEATURED (LOGO CAROUSEL) ================= -->
+<section class="featured-carousel">
+  <h4>As Featured In</h4>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/111.jpg" alt="logo 1">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/3333.jpg" alt="logo 2">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/333.jpg" alt="logo 3">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/555.jpg" alt="logo 4">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/777.jpg" alt="logo 5">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/1111.jpg" alt="logo 6">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/2222.jpg" alt="logo 7">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/4444.jpg" alt="logo 8">
+
+      <!-- duplicated for seamless infinite scroll -->
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/111.jpg" alt="logo 1">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/3333.jpg" alt="logo 2">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/333.jpg" alt="logo 3">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/555.jpg" alt="logo 4">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/777.jpg" alt="logo 5">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/1111.jpg" alt="logo 6">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/2222.jpg" alt="logo 7">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo/4444.jpg" alt="logo 8">
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="footer-nirvana">
+  <div class="footer-top">
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Connect</a>
+      <a href="#">Terms & Products</a>
+    </div>
+
+    <div class="footer-logo">
+      <img src="https://prium.github.io/nirvana/v2.0.0/assets/images/logo-nirvana-white.png" alt="Nirvana Logo">
+    </div>
+
+    <div class="footer-contact">
+      <p>(212) 123-4567 <span>•</span> 666 Unnamed Ave, California <span>•</span> nirvana@abc.com</p>
+    </div>
+
+    <form class="footer-form">
+      <input type="email" placeholder="Enter Email Here" required>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Powered by <a href="#">THEMEWAGON</a></p>
+  </div>
+</footer>
+
+</body>
 </html>
